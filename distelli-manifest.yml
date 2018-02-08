@@ -11,16 +11,11 @@ bminer415/citesting:
     - sudo apt-get install gcc-snapshot -y
     - sudo apt-get update
     - sudo apt-get install gcc-5 g++-5 -y
-    #- sudo apt-cache pkgnames | sort
-    #- which cmake
-    #- cmake --version
-    #- ls -la /
+    - which g++
+    - ls -la "$(which g++)"
+    - which g++-5
+    - ls -la "$(which g++-5)"
     - sudo ./$CMAKE_FILE --skip-license --prefix=/usr
-    #- ls -la /build
-    #- ls -la bin
-    #- which cmake
-    #- cmake --version
-    #- exit 2
     - git clone https://github.com/fireice-uk/xmr-stak.git
     - mkdir xmr-stak/build
     - cd xmr-stak/build
