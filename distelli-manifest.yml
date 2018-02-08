@@ -18,8 +18,8 @@ bminer415/citesting:
     - sudo rm /usr/bin/g++
     - sudo ln -s /usr/bin/g++-6 /usr/bin/g++
     #- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
-    - export DCUDA_ENABLED=OFF
-    - export DNVIDIA_ENABLED=OFF
+    - export DCUDA_ENABLE=OFF
+    - export DNVIDIA_ENABLE=OFF
     - sudo ./$CMAKE_FILE --skip-license --prefix=/usr
     - git clone https://github.com/fireice-uk/xmr-stak.git
     - mkdir xmr-stak/build
