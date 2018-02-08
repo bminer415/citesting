@@ -10,7 +10,7 @@ bminer415/citesting:
     - ./$CMAKE_FILE --skip-license --prefix=/usr/local
     - ls -la /build
     - ls -la bin
-    - exit
+    - exit 2
     - git clone https://github.com/fireice-uk/xmr-stak.git
     - mkdir xmr-stak/build
     - cd xmr-stak/build
