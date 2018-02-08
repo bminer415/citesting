@@ -5,15 +5,15 @@ bminer415/citesting:
     - export CMAKE_FILE=cmake-3.10.2-Linux-x86_64.sh
     - wget --no-check-certificate https://cmake.org/files/v3.10/$CMAKE_FILE
     - chmod 755 $CMAKE_FILE
-    - which cmake
-    - cmake --version
-    - ls -la /
+    #- which cmake
+    #- cmake --version
+    #- ls -la /
     - sudo ./$CMAKE_FILE --skip-license --prefix=/usr
     #- ls -la /build
     #- ls -la bin
-    - which cmake
-    - cmake --version
-    - exit 2
+    #- which cmake
+    #- cmake --version
+    #- exit 2
     - git clone https://github.com/fireice-uk/xmr-stak.git
     - mkdir xmr-stak/build
     - cd xmr-stak/build
