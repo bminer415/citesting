@@ -6,6 +6,8 @@ bminer415/citesting:
     - tar xf cmake-3.10.2.tar.gz
     - cd cmake-3.10.2
     - export CXX="$(which g++)"
+    - which g++
+    - echo "$CXX"
     - ./configure
     - make
     - make install
