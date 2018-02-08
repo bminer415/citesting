@@ -2,6 +2,7 @@ bminer415/citesting:
   PreBuild:
     - sudo apt-get update
     - sudo apt-get install -y libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common
+    - sudo apt-get upgrade
 
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
     - sudo apt-get update
