@@ -6,8 +6,12 @@ bminer415/citesting:
     - export CMAKE_FILE=cmake-3.10.2-Linux-x86_64.sh
     - wget --no-check-certificate https://cmake.org/files/v3.10/$CMAKE_FILE
     - chmod 755 $CMAKE_FILE
-    - sudo apt-cache pkgnames | sort
-    - exit 2
+    - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+    - sudo apt-get update
+    - sudo apt-get install gcc-snapshot -y
+    - sudo apt-get update
+    - sudo a-tpget install gcc-5 g++-5 -y
+    #- sudo apt-cache pkgnames | sort
     #- which cmake
     #- cmake --version
     #- ls -la /
