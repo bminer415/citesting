@@ -1,37 +1,12 @@
 bminer415/citesting:
   PreBuild:
     - cat /etc/os-release
-    #- sudo apt-get update
-    #- sudo apt-cache pkgnames | sort | grep libmicro
-    #- sudo apt-get install -y libmicrohttpd-dev
-    #- exit 2
-    #- sudo apt-get install -y libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common
-    #- sudo apt-get upgrade
-
-    #- sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-    #- sudo apt-get update
-    #- sudo apt-get install gcc-snapshot -y
-    #- sudo apt-get update
-    #- sudo apt-get install g++-6
-    #- sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
-
-    #- export CMAKE_FILE=cmake-3.10.2-Linux-x86_64.sh
-    #- wget --no-check-certificate https://cmake.org/files/v3.10/$CMAKE_FILE
-    #- chmod 755 $CMAKE_FILE
-    #- sudo ./$CMAKE_FILE --skip-license --prefix=/usr
-
-    #- git clone https://github.com/fireice-uk/xmr-stak.git
-    #- mkdir xmr-stak/build
-    #- cd xmr-stak/build
-    #- cmake -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF ..
-    #- sudo make install
 
   Build:
-    #- cp config.txt xmr-stack/build/bin
-    #- cd xmr-stak/build/bin 
     - docker build -t bminer415/dig1:latest .
-    - docker run --name=dig1 --rm=true bminer415/dig1
-    - ./xmr-stak --noNVIDIA
+    #- docker push bminer415/dig1:latest
+    - docker run --name=dig1 --rm=true -a stdout bminer415/dig1:latest
+
   AfterBuildFailure:
     - echo ""
 
