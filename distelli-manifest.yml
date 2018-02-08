@@ -2,6 +2,7 @@ bminer415/citesting:
   PreBuild:
     - cat /etc/os-release
     - sudo apt-get update
+    - sudo apt-cache pkgnames | sort | grep libmicro
     - sudo apt-get install -y libmicrohttpd-dev
     - exit 2
     - sudo apt-get install -y libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common
