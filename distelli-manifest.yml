@@ -1,7 +1,7 @@
 bminer415/citesting:
   PreBuild:
     - sudo apt-get update
-    - sudo apt-get install -y libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common
+    - sudo apt-get install -y libmicrohttpd libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common
     - sudo apt-get upgrade
 
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
@@ -9,10 +9,6 @@ bminer415/citesting:
     - sudo apt-get install gcc-snapshot -y
     - sudo apt-get update
     - sudo apt-get install g++-6
-    #- ls -la /usr/bin/g*
-    #- exit 2
-    #- sudo rm /usr/bin/g++
-    #- sudo ln -s /usr/bin/g++-6 /usr/bin/g++
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 
     - export CMAKE_FILE=cmake-3.10.2-Linux-x86_64.sh
@@ -24,7 +20,7 @@ bminer415/citesting:
     - mkdir xmr-stak/build
     - cd xmr-stak/build
     - cmake -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF ..
-    - make install
+    - sudo make install
 
   Build:
     - cp config.txt xmr-stack/build/bin
