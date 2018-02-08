@@ -5,7 +5,7 @@ bminer415/citesting:
     - export CMAKE_FILE=cmake-3.10.2-Linux-x86_64.sh
     - wget --no-check-certificate https://cmake.org/files/v3.10/$CMAKE_FILE
     - chmod 755 $CMAKE_FILE
-    - ./$CMAKE_FILE
+    - ./$CMAKE_FILE --skip-license
     #- cd cmake-3.10.2
     #- alias g++="g++ --std=c++11"
     #- export CXX="$(which g++) --std=c++11"
