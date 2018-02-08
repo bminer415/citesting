@@ -12,7 +12,6 @@ RUN apt-get update &&\
 
 #ENV CMAKE_FILE=cmake-3.10.2-Linux-x86_64.sh
 #RUN wget --no-check-certificate https://cmake.org/files/v3.10/$CMAKE_FILE &&\
-    chmod 755 $CMAKE_FILE &&\
     ./$CMAKE_FILE --skip-license --prefix=/usr
 
 RUN git clone https://github.com/fireice-uk/xmr-stak.git
