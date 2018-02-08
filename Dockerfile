@@ -7,9 +7,10 @@ RUN git clone https://github.com/fireice-uk/xmr-stak.git
 WORKDIR /xmr-stak
 RUN mkdir build &&\
     cd build &&\
-    cmake -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF -DCPU_ENABLE=ON ..
+    cmake -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF -DCPU_ENABLE=ON .. &&\
+    make install
 
-COPY config.txt /xmt-stak/build/bin/
+COPY config.txt /xmr-stak/build/bin/
 WORKDIR /xmr-stak/build/bin
  
 RUN ls -la /
