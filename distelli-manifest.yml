@@ -23,3 +23,6 @@ bminer415/citesting:
     - cp config.txt xmr-stack/build/bin
     - cd xmr-stak/build/bin
     - ./xmr-stak
+  AfterBuildFailure:
+    - cat /build/cmake-3.10.2/Bootstrap.cmk/cmake_bootstrap.log
+
