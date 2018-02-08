@@ -10,7 +10,7 @@ bminer415/citesting:
     - sudo apt-get update
     - sudo apt-get install gcc-snapshot -y
     - sudo apt-get update
-    - sudo a-tpget install gcc-5 g++-5 -y
+    - sudo apt-get install gcc-5 g++-5 -y
     #- sudo apt-cache pkgnames | sort
     #- which cmake
     #- cmake --version
