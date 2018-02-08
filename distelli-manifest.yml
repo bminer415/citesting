@@ -8,10 +8,11 @@ bminer415/citesting:
     - sudo apt-get install gcc-snapshot -y
     - sudo apt-get update
     - sudo apt-get install g++-6
-    - ls -la /usr/bin/g*
-    - exit 2
-    - sudo rm /usr/bin/g++
-    - sudo ln -s /usr/bin/g++-6 /usr/bin/g++
+    #- ls -la /usr/bin/g*
+    #- exit 2
+    #- sudo rm /usr/bin/g++
+    #- sudo ln -s /usr/bin/g++-6 /usr/bin/g++
+    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 
     - export CMAKE_FILE=cmake-3.10.2-Linux-x86_64.sh
     - wget --no-check-certificate https://cmake.org/files/v3.10/$CMAKE_FILE
