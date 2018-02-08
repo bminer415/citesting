@@ -1,8 +1,8 @@
 bminer415/citesting:
   PreBuild:
     - sudo apt-get update
-    - sudo apt-get install -y build-essential libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev software-properties-common
-    - wget --no-check-certificate http://www.cmake.org/files/v3.10/cmake-3.10.2.tar.gz
+    - sudo apt-get install -y build-essential libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev software-properties-common g++
+    - wget --no-check-certificate https://cmake.org/files/v3.10/cmake-3.10.2.tar.gz
     - tar xf cmake-3.10.2.tar.gz
     - cd cmake-3.10.2
     - ./configure
