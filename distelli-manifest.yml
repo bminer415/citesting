@@ -9,14 +9,17 @@ bminer415/citesting:
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
     - sudo apt-get update
     - sudo apt-get install gcc-snapshot -y
-    - sudo apt-get update
-    - sudo apt-get install gcc-5 g++-5 -y
-    - which g++
-    - ls -la "$(which g++)"
-    - which g++-5
-    - ls -la "$(which g++-5)"
-    - sudo rm /usr/bin/g++
-    - sudo ln -s /usr/bin/g++-6 /usr/bin/g++
+    #- sudo apt-get update
+    #- sudo apt-get install gcc-5 g++-5 -y
+    #- which g++
+    #- ls -la "$(which g++)"
+    #- which g++-5
+    #- ls -la "$(which g++-5)"
+    #- sudo rm /usr/bin/g++
+    #- sudo ln -s /usr/bin/g++-6 /usr/bin/g++
+    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
+    - export DCUDA_ENABLED=OFF
+    - export DNVIDIA_ENABLED=OFF
     - sudo ./$CMAKE_FILE --skip-license --prefix=/usr
     - git clone https://github.com/fireice-uk/xmr-stak.git
     - mkdir xmr-stak/build
