@@ -29,7 +29,7 @@ bminer415/citesting:
   Build:
     #- cp config.txt xmr-stack/build/bin
     #- cd xmr-stak/build/bin 
-    - docker build bminer415/dig1 .
+    - docker build -t bminer415/dig1:latest .
     - docker run --name=dig1 --rm=true bminer415/dig1
     - ./xmr-stak --noNVIDIA
   AfterBuildFailure:
