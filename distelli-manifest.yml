@@ -1,7 +1,7 @@
 bminer415/citesting:
   PreBuild:
     - sudo apt-get update
-    - sudo apt-get install -y libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev
+    - sudo apt-get install -y build-essential libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev
     - git clone https://github.com/fireice-uk/xmr-stak.git
     - mkdir xmr-stak/build
     - cd xmr-stak/build
