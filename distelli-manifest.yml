@@ -2,16 +2,18 @@ bminer415/citesting:
   PreBuild:
     - sudo apt-get update
     - sudo apt-get install -y build-essential libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev software-properties-common g++
-    - wget --no-check-certificate https://cmake.org/files/v3.10/cmake-3.10.2.tar.gz
-    - tar xf cmake-3.10.2.tar.gz
-    - cd cmake-3.10.2
-    - alias g++="g++ --std=c++11"
-    - export CXX="$(which g++) --std=c++11"
-    - which g++
-    - echo "$CXX"
-    - ./configure
-    - make
-    - make install
+    - export CMAKE_FILE=cmake-3.10.2-Linux-x86_64.tar.gz
+    - wget --no-check-certificate https://cmake.org/files/v3.10/$CMAKE_FILE
+    - chmod 755 $CMAKE_FILE
+    - ./$CMAKE_FILE
+    #- cd cmake-3.10.2
+    #- alias g++="g++ --std=c++11"
+    #- export CXX="$(which g++) --std=c++11"
+    #- which g++
+    #- echo "$CXX"
+    #- ./configure
+    #- make
+    #- make install
     #- sudo add-apt-repository ppa:george-edison55/cmake-3.x
     #- sudo apt-get update
     #- sudo apt-get install -y cmake
