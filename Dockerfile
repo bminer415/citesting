@@ -6,7 +6,7 @@ RUN apt-get update &&\
 RUN git clone https://github.com/fireice-uk/xmr-stak.git
 WORKDIR /xmr-stak
 RUN mkdir build &&\
-    cd xmr-stak/build &&\
+    cd build &&\
     cmake -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF -DCPU_ENABLE=ON ..
 
 COPY config.txt /xmt-stak/build/bin/
