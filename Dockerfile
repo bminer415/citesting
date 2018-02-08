@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update &&\
-    apt-get install -y libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common
+    apt-get install -y libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common wget
 
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test -y
 RUN apt-get update &&\
