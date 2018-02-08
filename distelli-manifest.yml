@@ -1,7 +1,9 @@
 bminer415/citesting:
   PreBuild:
+    - cat /etc/os-release
+    - exit 2
     - sudo apt-get update
-    - sudo apt-get install -y libmicrohttpd libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common
+    - sudo apt-get install -y libmicrohttpd-dev libssl-dev build-essential libhwloc-dev software-properties-common
     - sudo apt-get upgrade
 
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
