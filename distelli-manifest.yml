@@ -6,6 +6,8 @@ bminer415/citesting:
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
     - sudo apt-get update
     - sudo apt-get install gcc-snapshot -y
+    - ls -la /usr/bin/g*
+    - exit 2
     - sudo rm /usr/bin/g++
     - sudo ln -s /usr/bin/g++-6 /usr/bin/g++
 
