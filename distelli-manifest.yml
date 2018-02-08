@@ -5,10 +5,10 @@ bminer415/citesting:
     - wget --no-check-certificate https://cmake.org/files/v3.10/cmake-3.10.2.tar.gz
     - tar xf cmake-3.10.2.tar.gz
     - cd cmake-3.10.2
-    - g++ -std=c++0x
+    - alias g++="g++ --std=c++0x"
     - export CXX="$(which g++)"
-    - which g++
-    - echo "$CXX"
+    #- which g++
+    #- echo "$CXX"
     - ./configure
     - make
     - make install
