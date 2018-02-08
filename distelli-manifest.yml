@@ -6,7 +6,7 @@ bminer415/citesting:
     - tar xf cmake-3.10.2.tar.gz
     - cd cmake-3.10.2
     - alias g++="g++ --std=c++11"
-    - export CXX="$(which g++)"
+    - export CXX="$(which g++) --std=c++11"
     #- which g++
     #- echo "$CXX"
     - ./configure
