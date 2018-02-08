@@ -11,4 +11,8 @@ RUN mkdir xmr-stak/build &&\
 COPY config.txt /xmt-stak/build/bin/
 WORKDIR /xmr-stak/build/bin
  
-CMD ./xmr-stak --noNVIDIA
+RUN ls -la /
+RUN ls -la /xmr-stak
+RUN ls -la /xmr-stak/build/bin
+
+CMD cd /xmr-stak/build/bin; ./xmr-stak --noNVIDIA
